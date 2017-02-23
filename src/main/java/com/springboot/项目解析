@@ -1,0 +1,31 @@
+1.@SpringBootApplication：是Spring boot项目的核心注解，主要目的是
+ 开启自动配置,它主要组合了@Configuration,@EnableAutoConfiguration,
+@ComponentScanzhujie注解
+
+2.@RestController：它继承自@Controller注解。4.0之前的版本，
+Spring MVC的组件都使用@Controller来标识当前类是一个控制器servlet。
+
+3.@RequestMapping:用于映射访问地址
+
+4.也可以直接运行项目下的target文件中的run.bat文件，直接启动运行项目
+
+5.添加了spring-boot-starter-web依赖，会自动添加tomcat和Spring MVC
+的依赖，那么spring boot会对tomcat和spring MVC进行自动配置。
+
+6.添加spring-boot-starter-data-jps依赖，spring boot会自动进行
+JPA相关的配置。
+
+7.Spring boot允许使用properties文件，yaml文件或者命令行参数作为外部配置！
+
+8.@Value注解用于注入properties文件里的值
+
+9.Spring Boot还提供了基于类型安全的配置方式，通过@ConfigurationProperties
+将properties属性和一个Bean及其属性关联，从而实现类型安全的配置。
+
+10.通过@ConfigurationProperties加载properties文件内的配置，通过prefix
+属性指定properties的配置的前缀，通过locations指定properties文件的位置。
+例如：@ConfigurationProperties(prefix="user",
+    locations={"classpath:config/application.properties"})
+ 本例不需要配置
+
+11.可以使用@Autowired直接注入该配置
